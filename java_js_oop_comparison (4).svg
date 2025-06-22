@@ -1,0 +1,232 @@
+<svg viewBox="0 0 1800 1400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1800" height="1400" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <rect x="50" y="20" width="1700" height="70" fill="#2c3e50" rx="10"/>
+  <text x="900" y="60" text-anchor="middle" fill="white" font-size="28" font-weight="bold">
+    사용자 정의 객체: 객체, 인스턴스, 생성자 완전 분석 (Java vs JavaScript)
+  </text>
+  
+  <!-- Divider Line -->
+  <line x1="900" y1="110" x2="900" y2="1350" stroke="#6c757d" stroke-width="4" stroke-dasharray="15,10"/>
+  <text x="900" y="135" text-anchor="middle" fill="#6c757d" font-size="18" font-weight="bold">VS</text>
+  
+  <!-- Java Side Header -->
+  <rect x="50" y="110" width="820" height="60" fill="#f44336" rx="8"/>
+  <text x="460" y="145" text-anchor="middle" fill="white" font-size="22" font-weight="bold">
+    ☕ JAVA - 클래스 기반 객체 생성
+  </text>
+  <text x="460" y="165" text-anchor="middle" fill="white" font-size="14">
+    Class → Object(개념) → Instance(실체) | 컴파일 타임 결정
+  </text>
+  
+  <!-- JavaScript Side Header -->
+  <rect x="930" y="110" width="820" height="60" fill="#ffc107" rx="8"/>
+  <text x="1340" y="145" text-anchor="middle" fill="white" font-size="22" font-weight="bold">
+    🚀 JAVASCRIPT - 프로토타입 기반 객체 생성
+  </text>
+  <text x="1340" y="165" text-anchor="middle" fill="white" font-size="14">
+    Constructor Function/Class → Object = Instance | 런타임 결정
+  </text>
+  
+  <!-- 1. Class Definition -->
+  <rect x="70" y="190" width="780" height="150" fill="#ffebee" stroke="#f44336" stroke-width="2" rx="8"/>
+  <rect x="80" y="200" width="760" height="35" fill="#f44336" rx="5"/>
+  <text x="460" y="225" text-anchor="middle" fill="white" font-size="16" font-weight="bold">
+    1️⃣ 클래스 정의 (Class Definition)
+  </text>
+  
+  <rect x="90" y="245" width="740" height="85" fill="#ffffff" stroke="#f44336" rx="5"/>
+  <text x="100" y="265" fill="#d32f2f" font-size="13" font-family="monospace">// Java 클래스 정의 - 컴파일 타임에 구조 확정</text>
+  <text x="100" y="280" fill="#2c3e50" font-size="12" font-family="monospace">public class Person {</text>
+  <text x="100" y="295" fill="#2c3e50" font-size="12" font-family="monospace">    private String name;  // 필드 (인스턴스 변수)</text>
+  <text x="100" y="310" fill="#2c3e50" font-size="12" font-family="monospace">    public Person(String name) { this.name = name; }  // 생성자</text>
+  <text x="100" y="325" fill="#2c3e50" font-size="12" font-family="monospace">}</text>
+  
+  <rect x="950" y="190" width="780" height="150" fill="#fff8e1" stroke="#ffc107" stroke-width="2" rx="8"/>
+  <rect x="960" y="200" width="760" height="35" fill="#ffc107" rx="5"/>
+  <text x="1340" y="225" text-anchor="middle" fill="white" font-size="16" font-weight="bold">
+    1️⃣ 생성자 함수/클래스 정의 (Constructor Definition)
+  </text>
+  
+  <rect x="970" y="245" width="740" height="85" fill="#ffffff" stroke="#ffc107" rx="5"/>
+  <text x="980" y="265" fill="#f57f17" font-size="13" font-family="monospace">// JavaScript 생성자 함수 - 런타임에 동적 구조</text>
+  <text x="980" y="280" fill="#2c3e50" font-size="12" font-family="monospace">function Person(name) {  // 생성자 함수</text>
+  <text x="980" y="295" fill="#2c3e50" font-size="12" font-family="monospace">    this.name = name;  // 인스턴스 속성</text>
+  <text x="980" y="310" fill="#2c3e50" font-size="12" font-family="monospace">}  // 또는 class Person { constructor(name) {...} }</text>
+  
+  <!-- 2. Constructor & this -->
+  <rect x="70" y="360" width="780" height="170" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" rx="8"/>
+  <rect x="80" y="370" width="760" height="35" fill="#9c27b0" rx="5"/>
+  <text x="460" y="395" text-anchor="middle" fill="white" font-size="16" font-weight="bold">
+    2️⃣ 생성자와 this의 역할
+  </text>
+  
+  <text x="90" y="420" fill="#7b1fa2" font-size="14" font-weight="bold">🔧 Java 생성자 특징:</text>
+  <text x="90" y="440" fill="#2c3e50" font-size="12">• 클래스와 같은 이름의 메서드</text>
+  <text x="90" y="455" fill="#2c3e50" font-size="12">• this는 현재 인스턴스 참조 (고정적)</text>
+  <text x="90" y="470" fill="#2c3e50" font-size="12">• 오버로딩 가능 (매개변수 다르게)</text>
+  
+  <rect x="90" y="485" width="740" height="35" fill="#ffffff" stroke="#9c27b0" rx="3"/>
+  <text x="100" y="505" fill="#7b1fa2" font-size="11" font-family="monospace">Person person1 = new Person("Alice");  // this = person1 인스턴스</text>
+  
+  <rect x="950" y="360" width="780" height="170" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" rx="8"/>
+  <rect x="960" y="370" width="760" height="35" fill="#4caf50" rx="5"/>
+  <text x="1340" y="395" text-anchor="middle" fill="white" font-size="16" font-weight="bold">
+    2️⃣ 생성자와 this의 역할
+  </text>
+  
+  <text x="970" y="420" fill="#388e3c" font-size="14" font-weight="bold">🔧 JavaScript 생성자 특징:</text>
+  <text x="970" y="440" fill="#2c3e50" font-size="12">• 일반 함수지만 new로 호출 시 생성자 역할</text>
+  <text x="970" y="455" fill="#2c3e50" font-size="12">• this는 호출 방식에 따라 동적 결정</text>
+  <text x="970" y="470" fill="#2c3e50" font-size="12">• 프로토타입 기반 상속 지원</text>
+  
+  <rect x="970" y="485" width="740" height="35" fill="#ffffff" stroke="#4caf50" rx="3"/>
+  <text x="980" y="505" fill="#388e3c" font-size="11" font-family="monospace">const person1 = new Person("Alice");  // this = 새로 생성된 객체</text>
+  
+  <!-- 3. Instance Creation Process -->
+  <rect x="70" y="550" width="780" height="200" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="8"/>
+  <rect x="80" y="560" width="760" height="35" fill="#2196f3" rx="5"/>
+  <text x="460" y="585" text-anchor="middle" fill="white" font-size="16" font-weight="bold">
+    3️⃣ 인스턴스 생성 과정 (new 키워드)
+  </text>
+  
+  <text x="90" y="610" fill="#1976d2" font-size="14" font-weight="bold">⚙️ Java new 키워드 동작:</text>
+  <text x="90" y="630" fill="#2c3e50" font-size="12">1. 힙 메모리에 객체 공간 할당</text>
+  <text x="90" y="645" fill="#2c3e50" font-size="12">2. 인스턴스 변수 기본값으로 초기화</text>
+  <text x="90" y="660" fill="#2c3e50" font-size="12">3. 생성자 호출하여 초기화</text>
+  <text x="90" y="675" fill="#2c3e50" font-size="12">4. 객체 참조 반환</text>
+  
+  <rect x="90" y="690" width="740" height="50" fill="#ffffff" stroke="#2196f3" rx="3"/>
+  <text x="100" y="710" fill="#1976d2" font-size="11" font-family="monospace">Person p1 = new Person("Alice");  // 힙에 Person 객체 생성</text>
+  <text x="100" y="725" fill="#1976d2" font-size="11" font-family="monospace">Person p2 = new Person("Bob");    // 별도의 독립적인 인스턴스</text>
+  
+  <rect x="950" y="550" width="780" height="200" fill="#fce4ec" stroke="#e91e63" stroke-width="2" rx="8"/>
+  <rect x="960" y="560" width="760" height="35" fill="#e91e63" rx="5"/>
+  <text x="1340" y="585" text-anchor="middle" fill="white" font-size="16" font-weight="bold">
+    3️⃣ 객체 생성 과정 (new 키워드)
+  </text>
+  
+  <text x="970" y="610" fill="#c2185b" font-size="14" font-weight="bold">⚙️ JavaScript new 키워드 동작:</text>
+  <text x="970" y="630" fill="#2c3e50" font-size="12">1. 빈 객체 {} 생성</text>
+  <text x="970" y="645" fill="#2c3e50" font-size="12">2. 객체의 __proto__를 생성자.prototype에 연결</text>
+  <text x="970" y="660" fill="#2c3e50" font-size="12">3. 생성자 함수를 this=새객체로 호출</text>
+  <text x="970" y="675" fill="#2c3e50" font-size="12">4. 생성자가 객체 반환하지 않으면 새객체 반환</text>
+  
+  <rect x="970" y="690" width="740" height="50" fill="#ffffff" stroke="#e91e63" rx="3"/>
+  <text x="980" y="710" fill="#c2185b" font-size="11" font-family="monospace">const p1 = new Person("Alice");  // 새 객체 생성 + 프로토타입 연결</text>
+  <text x="980" y="725" fill="#c2185b" font-size="11" font-family="monospace">const p2 = new Person("Bob");    // 독립적이지만 같은 프로토타입</text>
+  
+  <!-- 4. Object vs Instance -->
+  <rect x="70" y="770" width="780" height="180" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="8"/>
+  <rect x="80" y="780" width="760" height="35" fill="#ff9800" rx="5"/>
+  <text x="460" y="805" text-anchor="middle" fill="white" font-size="16" font-weight="bold">
+    4️⃣ 객체 vs 인스턴스 개념
+  </text>
+  
+  <text x="90" y="830" fill="#f57c00" font-size="14" font-weight="bold">📝 Java에서 명확한 구분:</text>
+  <text x="90" y="850" fill="#2c3e50" font-size="12">• 객체 (Object): 클래스로 정의된 추상적 개념</text>
+  <text x="90" y="865" fill="#2c3e50" font-size="12">• 인스턴스 (Instance): 메모리에 생성된 구체적 실체</text>
+  <text x="90" y="880" fill="#2c3e50" font-size="12">• 클래스 → 객체 설계도 → 인스턴스 생성</text>
+  
+  <rect x="90" y="895" width="740" height="45" fill="#ffffff" stroke="#ff9800" rx="3"/>
+  <text x="100" y="915" fill="#f57c00" font-size="11" font-family="monospace">Person class → Person 객체 개념 → person1, person2 인스턴스</text>
+  <text x="100" y="930" fill="#f57c00" font-size="11" font-family="monospace">System.out.println(person1 instanceof Person);  // true</text>
+  
+  <rect x="950" y="770" width="780" height="180" fill="#f1f8e9" stroke="#8bc34a" stroke-width="2" rx="8"/>
+  <rect x="960" y="780" width="760" height="35" fill="#8bc34a" rx="5"/>
+  <text x="1340" y="805" text-anchor="middle" fill="white" font-size="16" font-weight="bold">
+    4️⃣ 객체 = 인스턴스 (동일 개념)
+  </text>
+  
+  <text x="970" y="830" fill="#689f38" font-size="14" font-weight="bold">📝 JavaScript에서 동일한 개념:</text>
+  <text x="970" y="850" fill="#2c3e50" font-size="12">• 객체 (Object): 실제 메모리에 존재하는 데이터</text>
+  <text x="970" y="865" fill="#2c3e50" font-size="12">• 인스턴스 (Instance): 생성자로 만든 객체</text>
+  <text x="970" y="880" fill="#2c3e50" font-size="12">• 객체 ≈ 인스턴스 (구분하지 않음)</text>
+  
+  <rect x="970" y="895" width="740" height="45" fill="#ffffff" stroke="#8bc34a" rx="3"/>
+  <text x="980" y="915" fill="#689f38" font-size="11" font-family="monospace">Person 생성자 → person1, person2 객체 (곧 인스턴스)</text>
+  <text x="980" y="930" fill="#689f38" font-size="11" font-family="monospace">console.log(person1 instanceof Person);  // true</text>
+  
+  <!-- 5. Multiple Creation Methods -->
+  <rect x="70" y="970" width="780" height="200" fill="#f9fbe7" stroke="#827717" stroke-width="2" rx="8"/>
+  <rect x="80" y="980" width="760" height="35" fill="#827717" rx="5"/>
+  <text x="460" y="1005" text-anchor="middle" fill="white" font-size="16" font-weight="bold">
+    5️⃣ 객체 생성 방법 (단일 방식)
+  </text>
+  
+  <text x="90" y="1030" fill="#827717" font-size="14" font-weight="bold">🛠️ Java 객체 생성:</text>
+  <text x="90" y="1050" fill="#2c3e50" font-size="12">• new 키워드만 사용 (일관성)</text>
+  <text x="90" y="1065" fill="#2c3e50" font-size="12">• 리플렉션: Class.newInstance()</text>
+  <text x="90" y="1080" fill="#2c3e50" font-size="12">• 팩토리 패턴 등으로 응용</text>
+  
+  <rect x="90" y="1095" width="740" height="65" fill="#ffffff" stroke="#827717" rx="3"/>
+  <text x="100" y="1115" fill="#827717" font-size="11" font-family="monospace">// Java - 명시적이고 일관된 방식</text>
+  <text x="100" y="1130" fill="#2c3e50" font-size="11" font-family="monospace">Person person = new Person("Alice");</text>
+  <text x="100" y="1145" fill="#2c3e50" font-size="11" font-family="monospace">ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();</text>
+  
+  <rect x="950" y="970" width="780" height="200" fill="#e0f2f1" stroke="#00695c" stroke-width="2" rx="8"/>
+  <rect x="960" y="980" width="760" height="35" fill="#00695c" rx="5"/>
+  <text x="1340" y="1005" text-anchor="middle" fill="white" font-size="16" font-weight="bold">
+    5️⃣ 객체 생성 방법 (다양한 방식)
+  </text>
+  
+  <text x="970" y="1030" fill="#00695c" font-size="14" font-weight="bold">🛠️ JavaScript 객체 생성 (3가지):</text>
+  <text x="970" y="1050" fill="#2c3e50" font-size="12">• 객체 리터럴: { } (가장 간단)</text>
+  <text x="970" y="1065" fill="#2c3e50" font-size="12">• 생성자 함수: new Constructor()</text>
+  <text x="970" y="1080" fill="#2c3e50" font-size="12">• ES6 클래스: new Class()</text>
+  
+  <rect x="970" y="1095" width="740" height="65" fill="#ffffff" stroke="#00695c" rx="3"/>
+  <text x="980" y="1115" fill="#00695c" font-size="11" font-family="monospace">// JavaScript - 다양하고 유연한 방식</text>
+  <text x="980" y="1130" fill="#2c3e50" font-size="11" font-family="monospace">const obj1 = {name: "Alice"};  const obj2 = new Person("Bob");</text>
+  <text x="980" y="1145" fill="#2c3e50" font-size="11" font-family="monospace">class User {}; const user = new User();</text>
+  
+  <!-- Final Comparison -->
+  <rect x="50" y="1190" width="1700" height="140" fill="#2c3e50" rx="10"/>
+  <text x="900" y="1220" text-anchor="middle" fill="white" font-size="22" font-weight="bold">
+    🎯 핵심 정리: 객체, 인스턴스, 생성자 차이점
+  </text>
+  
+  <!-- Java Summary -->
+  <rect x="70" y="1240" width="400" height="80" fill="#34495e" rx="5"/>
+  <text x="270" y="1260" text-anchor="middle" fill="#f44336" font-size="14" font-weight="bold">☕ Java 방식</text>
+  <text x="80" y="1275" fill="#ecf0f1" font-size="11">✓ 클래스 → 객체(개념) → 인스턴스(실체)</text>
+  <text x="80" y="1290" fill="#ecf0f1" font-size="11">✓ 컴파일 타임에 구조 확정</text>
+  <text x="80" y="1305" fill="#ecf0f1" font-size="11">✓ this는 현재 인스턴스 고정 참조</text>
+  
+  <!-- JavaScript Summary -->
+  <rect x="490" y="1240" width="400" height="80" fill="#34495e" rx="5"/>
+  <text x="690" y="1260" text-anchor="middle" fill="#ffc107" font-size="14" font-weight="bold">🚀 JavaScript 방식</text>
+  <text x="500" y="1275" fill="#ecf0f1" font-size="11">✓ 생성자 → 객체 = 인스턴스 (동일)</text>
+  <text x="500" y="1290" fill="#ecf0f1" font-size="11">✓ 런타임에 동적 구조 변경 가능</text>
+  <text x="500" y="1305" fill="#ecf0f1" font-size="11">✓ this는 호출 방식에 따라 동적 결정</text>
+  
+  <!-- Interview Q&A -->
+  <rect x="910" y="1240" width="420" height="80" fill="#34495e" rx="5"/>
+  <text x="1120" y="1260" text-anchor="middle" fill="#e74c3c" font-size="14" font-weight="bold">🔥 면접 단골 질문</text>
+  <text x="920" y="1275" fill="#ecf0f1" font-size="11">Q: "생성자란 무엇인가?" A: 객체 초기화 담당</text>
+  <text x="920" y="1290" fill="#ecf0f1" font-size="11">Q: "new 키워드 역할은?" A: 메모리 할당+초기화</text>
+  <text x="920" y="1305" fill="#ecf0f1" font-size="11">Q: "this가 뭔가요?" A: 현재 실행 컨텍스트 객체</text>
+  
+  <!-- Advanced Topics -->
+  <rect x="1350" y="1240" width="380" height="80" fill="#34495e" rx="5"/>
+  <text x="1540" y="1260" text-anchor="middle" fill="#9c27b0" font-size="14" font-weight="bold">💡 심화 개념</text>
+  <text x="1360" y="1275" fill="#ecf0f1" font-size="11">• 프로토타입 체인 vs 클래스 상속</text>
+  <text x="1360" y="1290" fill="#ecf0f1" font-size="11">• 메모리 할당 방식 (힙/스택)</text>
+  <text x="1360" y="1305" fill="#ecf0f1" font-size="11">• GC (가비지 컬렉션) 동작 원리</text>
+  
+  <!-- Connection Lines -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d"/>
+    </marker>
+  </defs>
+  
+  <!-- Comparison arrows -->
+  <line x1="850" y1="265" x2="950" y2="265" stroke="#6c757d" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="850" y1="445" x2="950" y2="445" stroke="#6c757d" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="850" y1="650" x2="950" y2="650" stroke="#6c757d" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="850" y1="850" x2="950" y2="850" stroke="#6c757d" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="850" y1="1080" x2="950" y2="1080" stroke="#6c757d" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>
