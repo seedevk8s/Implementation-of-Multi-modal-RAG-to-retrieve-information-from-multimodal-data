@@ -1,0 +1,123 @@
+<svg viewBox="0 0 900 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title-text { font-family: 'Arial', sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .header-text { font-family: 'Arial', sans-serif; font-size: 16px; font-weight: bold; fill: #34495e; }
+      .normal-text { font-family: 'Arial', sans-serif; font-size: 14px; fill: #2c3e50; }
+      .small-text { font-family: 'Arial', sans-serif; font-size: 12px; fill: #7f8c8d; }
+      .setup-box { fill: #e8f5e8; stroke: #27ae60; stroke-width: 2; }
+      .function-box { fill: #e3f2fd; stroke: #2196f3; stroke-width: 2; }
+      .process-box { fill: #fff3e0; stroke: #ff9800; stroke-width: 2; }
+      .output-box { fill: #fce4ec; stroke: #e91e63; stroke-width: 2; }
+      .arrow { stroke: #34495e; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="title-text">동영상 프레임 추출 프로그램</text>
+  <text x="450" y="55" text-anchor="middle" class="small-text">Video Frame Extraction Program Structure</text>
+  
+  <!-- Setup Section -->
+  <rect x="50" y="80" width="800" height="80" rx="5" class="setup-box"/>
+  <text x="70" y="105" class="header-text">1. 환경 설정 (Setup)</text>
+  <text x="70" y="125" class="normal-text">• Google Colab Drive 마운트</text>
+  <text x="70" y="145" class="normal-text">• 필요 라이브러리 설치: opencv-python, tqdm, pillow</text>
+  
+  <!-- Function 1: show_video_summary -->
+  <rect x="50" y="200" width="380" height="120" rx="5" class="function-box"/>
+  <text x="70" y="225" class="header-text">2-A. 동영상 요약 함수</text>
+  <text x="70" y="245" class="normal-text">show_video_summary()</text>
+  <text x="70" y="265" class="small-text">• 동영상 정보 분석</text>
+  <text x="70" y="280" class="small-text">• 첫 프레임을 썸네일로 추출</text>
+  <text x="70" y="295" class="small-text">• 프레임 수, FPS, 길이 정보 출력</text>
+  <text x="70" y="310" class="small-text">• 썸네일 이미지 표시</text>
+  
+  <!-- Function 2: extract_frames_from_videos -->
+  <rect x="470" y="200" width="380" height="120" rx="5" class="function-box"/>
+  <text x="490" y="225" class="header-text">2-B. 프레임 추출 함수</text>
+  <text x="490" y="245" class="normal-text">extract_frames_from_videos()</text>
+  <text x="490" y="265" class="small-text">• 모든 동영상 파일 처리</text>
+  <text x="490" y="280" class="small-text">• 지정된 간격으로 프레임 추출</text>
+  <text x="490" y="295" class="small-text">• 진행상황을 tqdm으로 표시</text>
+  <text x="490" y="310" class="small-text">• 개별 폴더에 프레임 저장</text>
+  
+  <!-- Process Flow -->
+  <rect x="50" y="360" width="800" height="40" rx="5" class="process-box"/>
+  <text x="450" y="385" text-anchor="middle" class="header-text">3. 실행 과정 (Execution Flow)</text>
+  
+  <!-- Step 1 -->
+  <rect x="50" y="430" width="180" height="80" rx="5" class="process-box"/>
+  <text x="140" y="455" text-anchor="middle" class="normal-text">동영상 폴더</text>
+  <text x="140" y="475" text-anchor="middle" class="normal-text">스캔</text>
+  <text x="140" y="495" text-anchor="middle" class="small-text">(.mp4 파일 찾기)</text>
+  
+  <!-- Step 2 -->
+  <rect x="270" y="430" width="180" height="80" rx="5" class="process-box"/>
+  <text x="360" y="455" text-anchor="middle" class="normal-text">동영상 정보</text>
+  <text x="360" y="475" text-anchor="middle" class="normal-text">요약 출력</text>
+  <text x="360" y="495" text-anchor="middle" class="small-text">(썸네일 포함)</text>
+  
+  <!-- Step 3 -->
+  <rect x="490" y="430" width="180" height="80" rx="5" class="process-box"/>
+  <text x="580" y="455" text-anchor="middle" class="normal-text">프레임 추출</text>
+  <text x="580" y="475" text-anchor="middle" class="normal-text">실행</text>
+  <text x="580" y="495" text-anchor="middle" class="small-text">(전체 프레임)</text>
+  
+  <!-- Step 4 -->
+  <rect x="710" y="430" width="140" height="80" rx="5" class="output-box"/>
+  <text x="780" y="455" text-anchor="middle" class="normal-text">프레임</text>
+  <text x="780" y="475" text-anchor="middle" class="normal-text">저장 완료</text>
+  <text x="780" y="495" text-anchor="middle" class="small-text">(.jpg 파일)</text>
+  
+  <!-- Arrows -->
+  <line x1="230" y1="470" x2="270" y2="470" class="arrow"/>
+  <line x1="450" y1="470" x2="490" y2="470" class="arrow"/>
+  <line x1="670" y1="470" x2="710" y2="470" class="arrow"/>
+  
+  <!-- Detailed Process -->
+  <rect x="50" y="550" width="800" height="40" rx="5" class="process-box"/>
+  <text x="450" y="575" text-anchor="middle" class="header-text">4. 상세 처리 과정 (Detailed Process)</text>
+  
+  <!-- Video Processing Details -->
+  <rect x="50" y="620" width="800" height="160" rx="5" class="function-box"/>
+  <text x="70" y="645" class="header-text">각 동영상 파일별 처리:</text>
+  
+  <text x="70" y="670" class="normal-text">1. OpenCV로 동영상 파일 열기</text>
+  <text x="70" y="690" class="normal-text">2. 동영상 메타데이터 추출 (총 프레임 수, FPS, 길이)</text>
+  <text x="70" y="710" class="normal-text">3. 첫 번째 프레임을 썸네일로 저장 및 표시</text>
+  <text x="70" y="730" class="normal-text">4. 전체 프레임을 순차적으로 읽어서 JPEG 파일로 저장</text>
+  <text x="70" y="750" class="normal-text">5. 진행 상황을 진행바(tqdm)로 실시간 표시</text>
+  <text x="70" y="770" class="normal-text">6. 각 동영상별로 별도 폴더에 프레임 저장</text>
+  
+  <!-- Configuration -->
+  <rect x="50" y="810" width="380" height="120" rx="5" class="setup-box"/>
+  <text x="70" y="835" class="header-text">설정 옵션:</text>
+  <text x="70" y="855" class="normal-text">• base_path: 기본 경로</text>
+  <text x="70" y="875" class="normal-text">• video_dir: 동영상 폴더명</text>
+  <text x="70" y="895" class="normal-text">• frame_dir: 프레임 저장 폴더명</text>
+  <text x="70" y="915" class="normal-text">• frame_interval: 프레임 추출 간격</text>
+  
+  <!-- Output Structure -->
+  <rect x="470" y="810" width="380" height="120" rx="5" class="output-box"/>
+  <text x="490" y="835" class="header-text">출력 구조:</text>
+  <text x="490" y="855" class="normal-text">frames/</text>
+  <text x="510" y="875" class="normal-text">├── video1/</text>
+  <text x="530" y="895" class="normal-text">│   ├── video1_frame00001.jpg</text>
+  <text x="530" y="915" class="normal-text">│   └── video1_frame00002.jpg</text>
+  
+  <!-- Libraries Used -->
+  <rect x="50" y="970" width="800" height="80" rx="5" class="setup-box"/>
+  <text x="70" y="995" class="header-text">사용된 주요 라이브러리:</text>
+  <text x="70" y="1015" class="normal-text">• OpenCV (cv2): 동영상 처리 및 프레임 추출</text>
+  <text x="70" y="1035" class="normal-text">• Pillow (PIL): 이미지 처리 및 썸네일 생성</text>
+  <text x="450" y="1015" class="normal-text">• tqdm: 진행 상황 표시</text>
+  <text x="450" y="1035" class="normal-text">• IPython.display: Jupyter에서 이미지 표시</text>
+  
+  <!-- Summary -->
+  <rect x="50" y="1090" width="800" height="60" rx="5" class="process-box"/>
+  <text x="450" y="1115" text-anchor="middle" class="header-text">💡 프로그램 목적</text>
+  <text x="450" y="1135" text-anchor="middle" class="normal-text">Multi-modal RAG 구현을 위한 동영상 데이터 전처리 - 동영상을 개별 프레임으로 분해</text>
+</svg>
