@@ -1,0 +1,188 @@
+<svg viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1600" height="1000" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <rect x="50" y="20" width="1500" height="60" fill="#2c3e50" rx="10"/>
+  <text x="800" y="55" text-anchor="middle" fill="white" font-size="24" font-weight="bold">
+    Java vs JavaScript: 객체와 인스턴스 개념 비교
+  </text>
+  
+  <!-- Divider Line -->
+  <line x1="800" y1="100" x2="800" y2="950" stroke="#6c757d" stroke-width="4" stroke-dasharray="15,10"/>
+  <text x="800" y="120" text-anchor="middle" fill="#6c757d" font-size="16" font-weight="bold">VS</text>
+  
+  <!-- Java Side -->
+  <rect x="50" y="100" width="720" height="50" fill="#f44336" rx="8"/>
+  <text x="410" y="130" text-anchor="middle" fill="white" font-size="18" font-weight="bold">
+    ☕ JAVA - 클래스 기반 (명확한 단계)
+  </text>
+  
+  <!-- JavaScript Side -->
+  <rect x="830" y="100" width="720" height="50" fill="#ffc107" rx="8"/>
+  <text x="1190" y="130" text-anchor="middle" fill="white" font-size="18" font-weight="bold">
+    🚀 JAVASCRIPT - 프로토타입 기반 (통합된 개념)
+  </text>
+  
+  <!-- Java: Step 1 - Class Definition -->
+  <rect x="70" y="170" width="680" height="100" fill="#ffebee" stroke="#f44336" stroke-width="2" rx="8"/>
+  <text x="410" y="195" text-anchor="middle" fill="#d32f2f" font-size="16" font-weight="bold">
+    1단계: 클래스 정의 (설계도)
+  </text>
+  <rect x="80" y="210" width="660" height="50" fill="#ffffff" stroke="#f44336" rx="5"/>
+  <text x="90" y="230" fill="#2c3e50" font-size="12" font-family="monospace">public class Person {</text>
+  <text x="90" y="245" fill="#2c3e50" font-size="12" font-family="monospace">  private String name; // 필드 정의</text>
+  <text x="90" y="260" fill="#2c3e50" font-size="12" font-family="monospace">}</text>
+  
+  <!-- JavaScript: Step 1 - Constructor/Class -->
+  <rect x="850" y="170" width="680" height="100" fill="#fff8e1" stroke="#ffc107" stroke-width="2" rx="8"/>
+  <text x="1190" y="195" text-anchor="middle" fill="#f57f17" font-size="16" font-weight="bold">
+    1단계: 생성자 함수/클래스 정의
+  </text>
+  <rect x="860" y="210" width="660" height="50" fill="#ffffff" stroke="#ffc107" rx="5"/>
+  <text x="870" y="230" fill="#2c3e50" font-size="12" font-family="monospace">function Person(name) {</text>
+  <text x="870" y="245" fill="#2c3e50" font-size="12" font-family="monospace">  this.name = name; // 프로퍼티 정의</text>
+  <text x="870" y="260" fill="#2c3e50" font-size="12" font-family="monospace">}</text>
+  
+  <!-- Arrow Down Java -->
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f44336"/>
+    </marker>
+    <marker id="arrowYellow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffc107"/>
+    </marker>
+  </defs>
+  
+  <line x1="410" y1="280" x2="410" y2="310" stroke="#f44336" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <line x1="1190" y1="280" x2="1190" y2="310" stroke="#ffc107" stroke-width="3" marker-end="url(#arrowYellow)"/>
+  
+  <!-- Java: Step 2 - Object Concept -->
+  <rect x="70" y="320" width="680" height="100" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" rx="8"/>
+  <text x="410" y="345" text-anchor="middle" fill="#7b1fa2" font-size="16" font-weight="bold">
+    2단계: 객체 개념 (추상적 정의)
+  </text>
+  <rect x="80" y="360" width="660" height="50" fill="#ffffff" stroke="#9c27b0" rx="5"/>
+  <text x="90" y="380" fill="#2c3e50" font-size="12">• Person 클래스로 만들어질 객체의 개념적 정의</text>
+  <text x="90" y="395" fill="#2c3e50" font-size="12">• 아직 메모리에 실체화되지 않은 상태</text>
+  
+  <!-- JavaScript: Step 2 - Object = Instance -->
+  <rect x="850" y="320" width="680" height="100" fill="#e8f5e8" stroke="#4caf50" stroke-width="2" rx="8"/>
+  <text x="1190" y="345" text-anchor="middle" fill="#388e3c" font-size="16" font-weight="bold">
+    2단계: 객체 생성 = 인스턴스 (동일 개념)
+  </text>
+  <rect x="860" y="360" width="660" height="50" fill="#ffffff" stroke="#4caf50" rx="5"/>
+  <text x="870" y="380" fill="#2c3e50" font-size="12">const person1 = new Person("Alice");</text>
+  <text x="870" y="395" fill="#2c3e50" font-size="12">// 바로 메모리에 실체화된 객체 생성</text>
+  
+  <!-- Arrow Down Java -->
+  <line x1="410" y1="430" x2="410" y2="460" stroke="#f44336" stroke-width="3" marker-end="url(#arrowRed)"/>
+  
+  <!-- Java: Step 3 - Instance Creation -->
+  <rect x="70" y="470" width="680" height="120" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="8"/>
+  <text x="410" y="495" text-anchor="middle" fill="#1976d2" font-size="16" font-weight="bold">
+    3단계: 인스턴스 생성 (메모리 실체화)
+  </text>
+  <rect x="80" y="510" width="660" height="70" fill="#ffffff" stroke="#2196f3" rx="5"/>
+  <text x="90" y="530" fill="#2c3e50" font-size="12">Person person1 = new Person("Alice");</text>
+  <text x="90" y="545" fill="#2c3e50" font-size="12">Person person2 = new Person("Bob");</text>
+  <text x="90" y="560" fill="#2c3e50" font-size="12">// 힙 메모리에 실제 인스턴스 생성</text>
+  <text x="90" y="575" fill="#2c3e50" font-size="12">// 각각 독립적인 메모리 공간 할당</text>
+  
+  <!-- Memory Representation -->
+  <rect x="50" y="610" width="720" height="180" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="8"/>
+  <text x="410" y="635" text-anchor="middle" fill="#f57c00" font-size="16" font-weight="bold">
+    💾 Java 메모리 구조
+  </text>
+  
+  <!-- Stack -->
+  <rect x="70" y="650" width="200" height="120" fill="#ffccbc" stroke="#d84315" rx="5"/>
+  <text x="170" y="670" text-anchor="middle" fill="#d84315" font-size="12" font-weight="bold">스택 (Stack)</text>
+  <text x="80" y="690" fill="#2c3e50" font-size="10">person1 → 주소값</text>
+  <text x="80" y="705" fill="#2c3e50" font-size="10">person2 → 주소값</text>
+  <text x="80" y="720" fill="#2c3e50" font-size="10">(참조 변수들)</text>
+  
+  <!-- Heap -->
+  <rect x="290" y="650" width="400" height="120" fill="#c8e6c9" stroke="#388e3c" rx="5"/>
+  <text x="490" y="670" text-anchor="middle" fill="#388e3c" font-size="12" font-weight="bold">힙 (Heap)</text>
+  
+  <rect x="300" y="685" width="180" height="40" fill="#ffffff" stroke="#388e3c" rx="3"/>
+  <text x="390" y="700" text-anchor="middle" fill="#2c3e50" font-size="10">Person 인스턴스 1</text>
+  <text x="390" y="715" text-anchor="middle" fill="#2c3e50" font-size="10">name: "Alice"</text>
+  
+  <rect x="500" y="685" width="180" height="40" fill="#ffffff" stroke="#388e3c" rx="3"/>
+  <text x="590" y="700" text-anchor="middle" fill="#2c3e50" font-size="10">Person 인스턴스 2</text>
+  <text x="590" y="715" text-anchor="middle" fill="#2c3e50" font-size="10">name: "Bob"</text>
+  
+  <!-- Arrows from Stack to Heap -->
+  <line x1="200" y1="690" x2="290" y2="705" stroke="#d84315" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <line x1="200" y1="705" x2="490" y2="705" stroke="#d84315" stroke-width="2" marker-end="url(#arrowRed)"/>
+  
+  <!-- JavaScript Memory -->
+  <rect x="830" y="450" width="720" height="340" fill="#f1f8e9" stroke="#8bc34a" stroke-width="2" rx="8"/>
+  <text x="1190" y="475" text-anchor="middle" fill="#689f38" font-size="16" font-weight="bold">
+    💾 JavaScript 메모리 구조 + 프로토타입 체인
+  </text>
+  
+  <!-- Objects in Memory -->
+  <rect x="850" y="490" width="680" height="120" fill="#ffffff" stroke="#8bc34a" rx="5"/>
+  <text x="1190" y="510" text-anchor="middle" fill="#689f38" font-size="12" font-weight="bold">힙 메모리의 객체들</text>
+  
+  <rect x="870" y="525" width="200" height="70" fill="#e8f5e8" stroke="#4caf50" rx="3"/>
+  <text x="970" y="545" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">person1 객체</text>
+  <text x="970" y="560" text-anchor="middle" fill="#2c3e50" font-size="10">name: "Alice"</text>
+  <text x="970" y="575" text-anchor="middle" fill="#2c3e50" font-size="10">speak: function</text>
+  <text x="970" y="590" text-anchor="middle" fill="#2c3e50" font-size="10">__proto__: Person.prototype</text>
+  
+  <rect x="1100" y="525" width="200" height="70" fill="#e8f5e8" stroke="#4caf50" rx="3"/>
+  <text x="1200" y="545" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">person2 객체</text>
+  <text x="1200" y="560" text-anchor="middle" fill="#2c3e50" font-size="10">name: "Bob"</text>
+  <text x="1200" y="575" text-anchor="middle" fill="#2c3e50" font-size="10">speak: function</text>
+  <text x="1200" y="590" text-anchor="middle" fill="#2c3e50" font-size="10">__proto__: Person.prototype</text>
+  
+  <!-- Prototype Chain -->
+  <rect x="850" y="620" width="680" height="90" fill="#fff8e1" stroke="#ffc107" rx="5"/>
+  <text x="1190" y="640" text-anchor="middle" fill="#f57f17" font-size="12" font-weight="bold">프로토타입 체인</text>
+  
+  <rect x="870" y="655" width="150" height="40" fill="#ffffff" stroke="#ffc107" rx="3"/>
+  <text x="945" y="675" text-anchor="middle" fill="#2c3e50" font-size="10">Person.prototype</text>
+  <text x="945" y="690" text-anchor="middle" fill="#2c3e50" font-size="10">공유 메서드들</text>
+  
+  <rect x="1050" y="655" width="150" height="40" fill="#ffffff" stroke="#ffc107" rx="3"/>
+  <text x="1125" y="675" text-anchor="middle" fill="#2c3e50" font-size="10">Object.prototype</text>
+  <text x="1125" y="690" text-anchor="middle" fill="#2c3e50" font-size="10">기본 메서드들</text>
+  
+  <rect x="1230" y="655" width="80" height="40" fill="#ffffff" stroke="#ffc107" rx="3"/>
+  <text x="1270" y="680" text-anchor="middle" fill="#2c3e50" font-size="10">null</text>
+  
+  <!-- Prototype arrows -->
+  <line x1="1020" y1="675" x2="1050" y2="675" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowYellow)"/>
+  <line x1="1200" y1="675" x2="1230" y2="675" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowYellow)"/>
+  
+  <!-- Arrows from objects to prototype -->
+  <line x1="970" y1="595" x2="945" y2="655" stroke="#4caf50" stroke-width="2" marker-end="url(#arrowYellow)" stroke-dasharray="5,5"/>
+  <line x1="1200" y1="595" x2="945" y2="655" stroke="#4caf50" stroke-width="2" marker-end="url(#arrowYellow)" stroke-dasharray="5,5"/>
+  
+  <!-- Dynamic Property Addition -->
+  <rect x="850" y="720" width="680" height="60" fill="#fce4ec" stroke="#e91e63" rx="5"/>
+  <text x="1190" y="740" text-anchor="middle" fill="#c2185b" font-size="12" font-weight="bold">동적 프로퍼티 추가 (JavaScript만 가능)</text>
+  <text x="860" y="760" fill="#2c3e50" font-size="11">person1.age = 25; // 런타임에 새 속성 추가</text>
+  <text x="860" y="775" fill="#2c3e50" font-size="11">delete person1.name; // 속성 삭제도 가능</text>
+  
+  <!-- Summary -->
+  <rect x="50" y="810" width="720" height="120" fill="#2c3e50" rx="8"/>
+  <text x="410" y="835" text-anchor="middle" fill="white" font-size="14" font-weight="bold">☕ Java 특징</text>
+  <text x="60" y="855" fill="#ecf0f1" font-size="12">✓ 클래스 → 객체(개념) → 인스턴스(실체)</text>
+  <text x="60" y="870" fill="#ecf0f1" font-size="12">✓ 컴파일 타임에 구조 확정</text>
+  <text x="60" y="885" fill="#ecf0f1" font-size="12">✓ 명확한 메모리 관리 (스택/힙 구분)</text>
+  <text x="60" y="900" fill="#ecf0f1" font-size="12">✓ 강한 타입 시스템</text>
+  <text x="60" y="915" fill="#ecf0f1" font-size="12">✓ 정적이고 안전한 구조</text>
+  
+  <rect x="830" y="810" width="720" height="120" fill="#2c3e50" rx="8"/>
+  <text x="1190" y="835" text-anchor="middle" fill="white" font-size="14" font-weight="bold">🚀 JavaScript 특징</text>
+  <text x="840" y="855" fill="#ecf0f1" font-size="12">✓ 생성자/클래스 → 객체 = 인스턴스 (동일)</text>
+  <text x="840" y="870" fill="#ecf0f1" font-size="12">✓ 런타임에 동적 변경 가능</text>
+  <text x="840" y="885" fill="#ecf0f1" font-size="12">✓ 프로토타입 체인으로 상속</text>
+  <text x="840" y="900" fill="#ecf0f1" font-size="12">✓ 동적 타입 시스템</text>
+  <text x="840" y="915" fill="#ecf0f1" font-size="12">✓ 유연하고 동적인 구조</text>
+</svg>
