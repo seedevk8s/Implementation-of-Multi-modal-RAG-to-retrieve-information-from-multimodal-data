@@ -1,0 +1,1 @@
+# Implementation-of-Multi-modal-RAG-to-retrieve-information-from-multimodal-data
