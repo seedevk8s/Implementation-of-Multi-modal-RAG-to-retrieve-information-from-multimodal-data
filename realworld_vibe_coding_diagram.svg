@@ -1,0 +1,156 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#1e293b">
+    RealWorld Vibe Coding 프로젝트 구조
+  </text>
+  
+  <!-- Frontend Section -->
+  <g>
+    <!-- Frontend Box -->
+    <rect x="50" y="80" width="300" height="300" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="200" y="110" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e40af">
+      Frontend (React)
+    </text>
+    
+    <!-- Frontend Tech Stack -->
+    <text x="70" y="140" font-size="14" fill="#374151">• React 19 + TypeScript</text>
+    <text x="70" y="160" font-size="14" fill="#374151">• Vite (빌드 도구)</text>
+    <text x="70" y="180" font-size="14" fill="#374151">• Mantine v8 (UI 라이브러리)</text>
+    <text x="70" y="200" font-size="14" fill="#374151">• TanStack Router</text>
+    <text x="70" y="220" font-size="14" fill="#374151">• Zustand (상태관리)</text>
+    <text x="70" y="240" font-size="14" fill="#374151">• TanStack Query (서버상태)</text>
+    <text x="70" y="260" font-size="14" fill="#374151">• Tailwind CSS</text>
+    
+    <!-- Port Info -->
+    <rect x="70" y="290" width="160" height="30" rx="5" fill="#fbbf24" opacity="0.3"/>
+    <text x="150" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">
+      Port: 5173
+    </text>
+  </g>
+  
+  <!-- Backend Section -->
+  <g>
+    <!-- Backend Box -->
+    <rect x="450" y="80" width="300" height="300" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="600" y="110" text-anchor="middle" font-size="18" font-weight="bold" fill="#15803d">
+      Backend (Go)
+    </text>
+    
+    <!-- Backend Tech Stack -->
+    <text x="470" y="140" font-size="14" fill="#374151">• Go 1.21+</text>
+    <text x="470" y="160" font-size="14" fill="#374151">• net/http + Gorilla Mux</text>
+    <text x="470" y="180" font-size="14" fill="#374151">• JWT 인증</text>
+    <text x="470" y="200" font-size="14" fill="#374151">• Clean Architecture</text>
+    <text x="470" y="220" font-size="14" fill="#374151">• 의존성 주입</text>
+    <text x="470" y="240" font-size="14" fill="#374151">• RealWorld API 스펙</text>
+    
+    <!-- Port Info -->
+    <rect x="470" y="290" width="160" height="30" rx="5" fill="#fbbf24" opacity="0.3"/>
+    <text x="550" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">
+      Port: 8080
+    </text>
+  </g>
+  
+  <!-- Database Section -->
+  <g>
+    <!-- Database Box -->
+    <rect x="850" y="80" width="300" height="300" rx="10" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+    <text x="1000" y="110" text-anchor="middle" font-size="18" font-weight="bold" fill="#be185d">
+      Database
+    </text>
+    
+    <!-- Database Info -->
+    <text x="870" y="140" font-size="14" fill="#374151">• 개발: SQLite</text>
+    <text x="870" y="160" font-size="14" fill="#374151">• 운영: PostgreSQL</text>
+    <text x="870" y="180" font-size="14" fill="#374151">• 자동 마이그레이션</text>
+    
+    <!-- Database Entities -->
+    <text x="870" y="220" font-size="14" font-weight="bold" fill="#be185d">주요 엔티티:</text>
+    <text x="870" y="240" font-size="12" fill="#374151">• Users (사용자)</text>
+    <text x="870" y="255" font-size="12" fill="#374151">• Articles (게시글)</text>
+    <text x="870" y="270" font-size="12" fill="#374151">• Comments (댓글)</text>
+    <text x="870" y="285" font-size="12" fill="#374151">• Tags (태그)</text>
+    <text x="870" y="300" font-size="12" fill="#374151">• Follows (팔로우)</text>
+    <text x="870" y="315" font-size="12" fill="#374151">• Favorites (즐겨찾기)</text>
+  </g>
+  
+  <!-- Connections -->
+  <!-- Frontend to Backend -->
+  <path d="M 350 230 Q 400 230 450 230" stroke="#6366f1" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="400" y="220" text-anchor="middle" font-size="12" fill="#6366f1">API 호출</text>
+  
+  <!-- Backend to Database -->
+  <path d="M 750 230 Q 800 230 850 230" stroke="#6366f1" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="800" y="220" text-anchor="middle" font-size="12" fill="#6366f1">데이터 조회/저장</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6366f1"/>
+    </marker>
+  </defs>
+  
+  <!-- Vibe Coding Principles -->
+  <g>
+    <rect x="50" y="450" width="1100" height="150" rx="10" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+    <text x="600" y="480" text-anchor="middle" font-size="18" font-weight="bold" fill="#374151">
+      Vibe Coding 원칙
+    </text>
+    
+    <!-- Principles in a row -->
+    <g>
+      <!-- Rapid Prototyping -->
+      <rect x="80" y="500" width="200" height="80" rx="8" fill="#ddd6fe" stroke="#8b5cf6" stroke-width="1"/>
+      <text x="180" y="520" text-anchor="middle" font-size="14" font-weight="bold" fill="#6b21a8">빠른 프로토타이핑</text>
+      <text x="180" y="540" text-anchor="middle" font-size="12" fill="#374151">핵심 기능 우선</text>
+      <text x="180" y="555" text-anchor="middle" font-size="12" fill="#374151">신속한 개발</text>
+      
+      <!-- Iterative Improvement -->
+      <rect x="300" y="500" width="200" height="80" rx="8" fill="#fed7d7" stroke="#f56565" stroke-width="1"/>
+      <text x="400" y="520" text-anchor="middle" font-size="14" font-weight="bold" fill="#c53030">점진적 개선</text>
+      <text x="400" y="540" text-anchor="middle" font-size="12" fill="#374151">단계별 기능 향상</text>
+      <text x="400" y="555" text-anchor="middle" font-size="12" fill="#374151">지속적 리팩토링</text>
+      
+      <!-- Real-time Feedback -->
+      <rect x="520" y="500" width="200" height="80" rx="8" fill="#c6f6d5" stroke="#48bb78" stroke-width="1"/>
+      <text x="620" y="520" text-anchor="middle" font-size="14" font-weight="bold" fill="#2f855a">실시간 피드백</text>
+      <text x="620" y="540" text-anchor="middle" font-size="12" fill="#374151">개발 중 지속적 테스트</text>
+      <text x="620" y="555" text-anchor="middle" font-size="12" fill="#374151">즉각적인 검증</text>
+      
+      <!-- Documentation -->
+      <rect x="740" y="500" width="200" height="80" rx="8" fill="#feebc8" stroke="#ed8936" stroke-width="1"/>
+      <text x="840" y="520" text-anchor="middle" font-size="14" font-weight="bold" fill="#c05621">실시간 문서화</text>
+      <text x="840" y="540" text-anchor="middle" font-size="12" fill="#374151">코드와 함께</text>
+      <text x="840" y="555" text-anchor="middle" font-size="12" fill="#374151">동시 문서 작성</text>
+    </g>
+  </g>
+  
+  <!-- Development Commands -->
+  <g>
+    <rect x="50" y="650" width="1100" height="120" rx="10" fill="#1f2937" stroke="#374151" stroke-width="2"/>
+    <text x="600" y="680" text-anchor="middle" font-size="18" font-weight="bold" fill="#f9fafb">
+      주요 개발 명령어
+    </text>
+    
+    <text x="100" y="710" font-size="14" fill="#10b981" font-weight="bold">make setup</text>
+    <text x="220" y="710" font-size="12" fill="#d1d5db">개발 환경 초기 설정</text>
+    
+    <text x="100" y="730" font-size="14" fill="#10b981" font-weight="bold">make dev</text>
+    <text x="220" y="730" font-size="12" fill="#d1d5db">프론트엔드 + 백엔드 동시 실행</text>
+    
+    <text x="100" y="750" font-size="14" fill="#10b981" font-weight="bold">make test</text>
+    <text x="220" y="750" font-size="12" fill="#d1d5db">전체 테스트 실행</text>
+    
+    <text x="500" y="710" font-size="14" fill="#3b82f6" font-weight="bold">make dev-front</text>
+    <text x="650" y="710" font-size="12" fill="#d1d5db">프론트엔드만 실행</text>
+    
+    <text x="500" y="730" font-size="14" fill="#22c55e" font-weight="bold">make dev-back</text>
+    <text x="650" y="730" font-size="12" fill="#d1d5db">백엔드만 실행</text>
+    
+    <text x="500" y="750" font-size="14" fill="#f59e0b" font-weight="bold">make build</text>
+    <text x="650" y="750" font-size="12" fill="#d1d5db">전체 프로젝트 빌드</text>
+  </g>
+</svg>
