@@ -1,0 +1,90 @@
+graph TB
+    subgraph "🎯 RealWorld Vibe Coding Project"
+        subgraph "Frontend (React) - Port 5173"
+            F1[React 19 + TypeScript]
+            F2[Vite 빌드 도구]
+            F3[Mantine v8 UI]
+            F4[TanStack Router]
+            F5[Zustand 상태관리]
+            F6[TanStack Query 서버상태]
+            F7[Tailwind CSS]
+            F8[React Hook Form + Zod]
+        end
+        
+        subgraph "Backend (Go) - Port 8080"
+            B1[Go 1.21+ Standard Library]
+            B2[net/http + Gorilla Mux]
+            B3[JWT 인증]
+            B4[Clean Architecture]
+            B5[의존성 주입]
+            B6[RealWorld API 스펙]
+        end
+        
+        subgraph "Database Layer"
+            D1[SQLite 개발환경]
+            D2[PostgreSQL 운영환경]
+            D3[자동 마이그레이션]
+        end
+        
+        subgraph "Data Models"
+            M1[Users 사용자]
+            M2[Articles 게시글]
+            M3[Comments 댓글]
+            M4[Tags 태그]
+            M5[Follows 팔로우]
+            M6[Favorites 즐겨찾기]
+        end
+        
+        subgraph "💡 Vibe Coding Principles"
+            P1[🚀 빠른 프로토타이핑<br/>핵심 기능 우선]
+            P2[🔄 점진적 개선<br/>단계별 기능 향상]
+            P3[⚡ 실시간 피드백<br/>개발 중 지속적 테스트]
+            P4[📝 실시간 문서화<br/>코드와 함께 문서 작성]
+        end
+        
+        subgraph "⚙️ Development Commands"
+            C1[make setup<br/>개발 환경 설정]
+            C2[make dev<br/>전체 서버 실행]
+            C3[make test<br/>테스트 실행]
+            C4[make build<br/>프로젝트 빌드]
+            C5[make dev-front<br/>프론트엔드만]
+            C6[make dev-back<br/>백엔드만]
+        end
+    end
+    
+    %% 연결 관계
+    F1 --> B1
+    F5 --> B6
+    F6 --> B6
+    B2 --> D1
+    B2 --> D2
+    D1 --> M1
+    D1 --> M2
+    D1 --> M3
+    D1 --> M4
+    D1 --> M5
+    D1 --> M6
+    D2 --> M1
+    D2 --> M2
+    D2 --> M3
+    D2 --> M4
+    D2 --> M5
+    D2 --> M6
+    
+    %% API 호출 표시
+    F1 -.->|API 호출| B1
+    B1 -.->|데이터 CRUD| D1
+    B1 -.->|데이터 CRUD| D2
+    
+    %% 스타일링
+    classDef frontend fill:#dbeafe,stroke:#3b82f6,stroke-width:2px
+    classDef backend fill:#dcfce7,stroke:#22c55e,stroke-width:2px
+    classDef database fill:#fce7f3,stroke:#ec4899,stroke-width:2px
+    classDef principles fill:#f3f4f6,stroke:#6b7280,stroke-width:2px
+    classDef commands fill:#1f2937,stroke:#374151,stroke-width:2px,color:#f9fafb
+    
+    class F1,F2,F3,F4,F5,F6,F7,F8 frontend
+    class B1,B2,B3,B4,B5,B6 backend
+    class D1,D2,D3,M1,M2,M3,M4,M5,M6 database
+    class P1,P2,P3,P4 principles
+    class C1,C2,C3,C4,C5,C6 commands
